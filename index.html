@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Velha</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="./resources/console.png" type="image/x-icon">
+    <script src="./index.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&family=Playfair:ital,wght@1,300&display=swap" rel="stylesheet">
+</head>
+<body>
+     <header>
+        <h1>Jogo da Velha</h1>
+     </header>
+     <section>
+        <form id="player registration">
+            <div class="players">
+                <h4>Jogadores:</h4>
+                <div class="player1">
+                    <div class="name-player">
+                        <label for="player-one">Jogador N° 1</label>
+                        <input type="text" name="player-one" id="player-one" placeholder="Insira seu Nome Jogador">
+                    </div>
+                    <div class="peao-player">
+                        <label for="x1">X</label>
+                        <input class="peao" id="x1" value="X" name="peao-x1" type="checkbox">
+                        <label for="o1">O</label>
+                        <input class="peao" id="o1" value="O" name="peao-o1" type="checkbox">
+                    </div>
+                </div>
+                <div class="player2">
+                    <div class="name-player">
+                        <label for="player-two">Jogador N° 2</label>
+                        <input type="text" name="player-two" id="player-two" placeholder="Insira seu Nome Jogador">
+                    </div>
+                    <div class="peao-player">
+                        <label for="x2">X</label>
+                        <input class="peao" id="x2" value="X" name="peao-x2" type="checkbox">
+                        <label for="o2">O</label>
+                        <input class="peao" id="o2" value="O" name="peao-o2" type="checkbox">
+                    </div>
+                </div>
+                <button type="submit" id="init">Iniciar partida</button>
+                <button id="reboot">Reiniciar</button>
+            </div>
+            <div class="game">
+                <label for="next-player">Proximo a jogar:</label>
+                <input type="text" class="next-player" id="next-player" value="" disabled>
+            </div>  
+        </form>
+        <div class="table">
+            <span class="campo-selecao" id="quadro1"></span>
+            <span class="campo-selecao" id="quadro2"></span>
+            <span class="campo-selecao" id="quadro3"></span>
+            <span class="campo-selecao" id="quadro4"></span>
+            <span class="campo-selecao" id="quadro5"></span>
+            <span class="campo-selecao" id="quadro6"></span>
+            <span class="campo-selecao" id="quadro7"></span>
+            <span class="campo-selecao" id="quadro8"></span>
+            <span class="campo-selecao" id="quadro9"></span>
+        </div>
+     </section>
+</body>
+</html>
