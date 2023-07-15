@@ -43,6 +43,53 @@ reboot.addEventListener('click', function(ev){
 
 })
 
+// Validação de peão já selecionado (player 01)
+document.getElementById('x1').addEventListener('click', ()=>{
+
+    if (document.getElementById('x1').checked){
+        document.querySelector('#x2').disabled = true
+        document.querySelector('#o1').disabled = true
+    } else {
+        document.querySelector('#x2').disabled = false
+        document.querySelector('#o1').disabled = false
+    }
+})
+
+document.getElementById('o1').addEventListener('click', ()=>{
+
+    if (document.getElementById('o1').checked){
+        document.querySelector('#o2').disabled = true
+        document.querySelector('#x1').disabled = true
+    } else {
+        document.querySelector('#x1').disabled = false
+        document.querySelector('#o2').disabled = false
+    }
+})
+
+// Validação de peão já selecionado (player 02)
+document.getElementById('x2').addEventListener('click', ()=>{
+
+    if (document.getElementById('x2').checked){
+        document.querySelector('#x1').disabled = true
+        document.querySelector('#o2').disabled = true
+    } else {
+        document.querySelector('#x1').disabled = false
+        document.querySelector('#o2').disabled = false
+    }
+})
+
+document.getElementById('o2').addEventListener('click', ()=>{
+
+    if (document.getElementById('o2').checked){
+        document.querySelector('#o1').disabled = true
+        document.querySelector('#x2').disabled = true
+    } else {
+        document.querySelector('#x2').disabled = false
+        document.querySelector('#o1').disabled = false
+    }
+})
+
+
 // formulário
 init.addEventListener('click', function(ev){
     ev.preventDefault()
@@ -69,6 +116,7 @@ init.addEventListener('click', function(ev){
 
 // Tabuleiro - jogadas
 span.forEach(function(quadro){
+
     quadro.addEventListener('click', function(){
 
         // validação inicio game
@@ -87,6 +135,7 @@ span.forEach(function(quadro){
             nextPlayer.value = playersGame[0].playerOne
         }
     })
+
 });
 
 // Validação do vencedor
